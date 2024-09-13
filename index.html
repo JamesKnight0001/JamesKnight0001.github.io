@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <section class="portfolio-container">
+        <header class="portfolio-base">
+            <nav class="top-bar">
+                <span class="blue-text">James's</span> <span class="red-text">Portfolio</span>
+            </nav>
+            <h1 class="hero">
+                <span class="green-text">Hi</span>, I am <span class="red-text">James</span>.
+            </h1>
+            <div class="content-wrapper">
+                <div class="content-grid">
+                    <main class="main-column">
+                        <section class="roles-section">
+                            <div class="roles-grid">
+                                <div class="role-column">
+                                    <div class="role-content">
+                                        <h2 class="section-title">I am a...</h2>
+                                        <article class="role-card">
+                                            <h3 class="role-title">Developer</h3>
+                                            <p class="role-description">I am a developer; I mainly create Python projects and sometimes Javascript projects. I created a lot of AI projects, such as Juroku.AI, Furi.AI v3, Uri.AI, H-Agent, and UltimateAGI.</p>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="role-column">
+                                    <div class="role-content">
+                                        <article class="role-card">
+                                            <h3 class="role-title">Gamer</h3>
+                                            <p class="role-description">I loved playing games like Minecraft, Roblox, Fortnite, GTA-V, and CSGO. But I stopped playing games since they are boring now.</p>
+                                        </article>
+                                        <article class="role-card">
+                                            <h3 class="role-title">Hacker</h3>
+                                            <p class="role-description">Back when I started learning how to code, I mainly learned how to code by creating internal/external exploits in games like Fortnite, Minecraft, and sometimes CSGO. And I also used to brute-force certain websites, and DDoS games.</p>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="role-column">
+                                    <div class="role-content">
+                                        <article class="role-card">
+                                            <h3 class="role-title">Human</h3>
+                                            <p class="role-description">I may be cold sometimes, but I am still human. We humans express emotions in different of ways, sometimes people let their anger out, sometimes people hide their anger. I myself am not easily angered, I am a really cool headed guy.</p>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                    <aside class="secondary-column">
+                        <h2 class="projects-title">Projects</h2>
+                        <div id="projects-container">
+                            <article class="project-card">
+                                <h3 class="project-title">Furi.AI V3</h3>
+                                <p class="project-info"><strong>Info:</strong> Furi.AI is an AI powered Aim-Assist. It's created specifically for only Fortnite.</p>
+                                <p class="project-info"><strong>Features:</strong></p>
+                                <p class="project-info">- AimAssist | It aims at a player by using an AI Image ...</p>
+                                <p class="project-info"><strong>Tags:</strong> <span class="tag">AI</span> <span class="tag">Python</span> <span class="tag">V3</span></p>
+                            </article>
+                            <article class="project-card">
+                                <h3 class="project-title">Juroku.AI</h3>
+                                <p class="project-info"><strong>Info:</strong> Juroku.AI is a openai reverse proxy, where I reverse engineer websites that uses openai or andriod apps that uses openai. [LEGAL]</p>
+                                <p class="project-info"><strong>Features:</strong></p>
+                                <p class="project-info">- claude-3.5-sonnet, gpt-4o, gpt-4-turbo, and midjourney, I have around 50 models and 40 websites and 20 apps I reverse engineered.</p>
+                                <p class="project-info"><strong>Demo:</strong></p>
+                                <p class="project-info">- [none yet]</p>
+                                <p class="project-info">- Release date in 2025, public and free.</p>
+                                <p class="project-info"><strong>Tags:</strong> <span class="tag">AI</span> <span class="tag">Python</span> <span class="tag">V1</span></p>
+                            </article>
+                        </div>
+                        <button id="show-more-btn">Show More</button>
+
+                        <h2 class="schoolwork-title">School Work</h2>
+                        <div id="schoolwork-container">
+                            <article class="schoolwork-card">
+                                <h3 class="project-title">Philosopher Qoutes - Philosophy 12</h3>
+                                <p class="project-info"><strong>Info:</strong> “Man is born free, but is everywhere in chains” – Jean-Jacques Rousseau</p>
+                                <p class="project-info"><strong>Tags:</strong> <span class="tag">school</span> <span class="tag">philosophy 12</span></p>
+                            </article>
+                        </div>
+                        <!-- <button id="show-more-schoolwork-btn">Show More Schoolwork</button> -->
+                    </aside>
+                </div>
+            </div>
+        </header>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS.load('particles-js', 'particles.json', function() {
+                console.log('particles.js loaded - callback');
+            });
+
+            function setupContentToggle(containerId, btnId, pageUrl) {
+                const btn = document.getElementById(btnId);
+                
+                if (btn) {
+                    btn.style.display = 'block';
+                    btn.addEventListener('click', function() {
+                        console.log(`Button ${btnId} clicked. Redirecting to ${pageUrl}`);
+                        window.location.href = pageUrl;
+                    });
+                } else {
+                    console.log(`Button with ID ${btnId} not found.`);
+                }
+            }
+            
+            setupContentToggle('projects-container', 'show-more-btn', 'projects.html');
+            setupContentToggle('schoolwork-container', 'show-more-schoolwork-btn', 'schoolwork.html');
+        });
+    </script>          
+</body>
+</html>
